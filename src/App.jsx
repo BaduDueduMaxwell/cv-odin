@@ -4,7 +4,7 @@ import GeneralInfo from "./Components/GeneralInfo";
 import Education from "./Components/Education";
 import Experience from "./Components/Experience";
 import Preview from "./Components/Preview";
-import "./App.css"; // Import your custom CSS file
+import "./App.css"; 
 
 function App() {
   // State variables to store form data
@@ -30,25 +30,20 @@ function App() {
     <div>
       <Header />
       <div className="grid-container">
-       
         <div className="item-1">
-        <div >
-           {/* General Info Component */}
-          <GeneralInfo setGeneralInfo={setFormData} />
+          <div>
+            <GeneralInfo setGeneralInfo={setFormData} />
+          </div>
+
+          <div>
+            <Education setEducation={setEducationalData} />
+          </div>
+
+          <div>
+            <Experience setExperience={setExperienceData} />
+          </div>
         </div>
 
-        {/* Education Component */}
-        <div>
-          <Education setEducation={setEducationalData} />
-        </div>
-
-        {/* Experience Component */}
-        <div>
-          <Experience setExperience={setExperienceData} />
-        </div>
-        </div>
-
-        {/* Preview Component */}
         <div className="item-2">
           <Preview
             generalInfo={formData}
